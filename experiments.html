@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore hands-on engineering experiments for high school STEM education at stEmhelp.">
+    <title>stEmhelp - Experiments</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="gradient-bg"></div>
+    <div class="circuit-pattern"></div>
+    <div class="particles" id="particles"></div>
+    
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><img src="./images/stemhelp-logo.png" alt="stEmhelp Logo"></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+                <li><a href="contact.html">Contact & Booking</a></li>
+                <li><a href="founder.html">Founder</a></li>
+                <li><a href="social.html">Social</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="#" onclick="openSignUpModal()" class="signin-btn">Sign In / Sign Up</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+        </div>
+    </nav>
+
+    <section class="section page-header">
+        <h2 class="section-title">Hands-on Engineering Experiments</h2>
+        <p class="section-subtitle">Learn engineering principles through interactive experiments with detailed procedures, videos, and comprehensive resources.</p>
+        
+        <div class="experiments-grid">
+            <div class="experiment-card" onclick="openExperimentResources('ring-pulley')">
+                <div class="experiment-image">
+                    📸 Ring Pulley Experiment Photos/Videos
+                    <br>
+                    <small>Click to access all resources</small>
+                </div>
+                <h3>Ring Pulley</h3>
+                <p>Explore mechanical advantage and force distribution through hands-on pulley system experiments.</p>
+            </div>
+            
+            <div class="experiment-card" onclick="openExperimentResources('flexure-cantilever')">
+                <div class="experiment-image">
+                    📸 Cantilever Deflection Photos/Videos
+                    <br>
+                    <small>Click to access all resources</small>
+                </div>
+                <h3>Flexure - Cantilever Deflection</h3>
+                <p>Understand beam behavior and deflection principles through cantilever beam testing.</p>
+            </div>
+            
+            <div class="experiment-card" onclick="openExperimentResources('flexure-beam')">
+                <div class="experiment-image">
+                    📸 Beam Deflection Photos/Videos
+                    <br>
+                    <small>Click to access all resources</small>
+                </div>
+                <h3>Flexure - Beam Deflection</h3>
+                <p>Analyze structural behavior and load distribution in simply supported beam configurations.</p>
+            </div>
+        </div>
+
+        <!-- Experiment Resources Modal (placeholder for future implementation) -->
+        <div id="experimentModal" class="modal" style="display: none;">
+            <div class="modal-content experiment-modal">
+                <span class="close" onclick="closeExperimentModal()">&times;</span>
+                <h3 id="experimentTitle">Experiment Resources</h3>
+                <div id="experimentContent">
+                    <div class="resource-tabs">
+                        <button class="tab-button active" onclick="showTab('photos')">Photos</button>
+                        <button class="tab-button" onclick="showTab('videos')">Videos</button>
+                        <button class="tab-button" onclick="showTab('pdfs')">PDF Guides</button>
+                    </div>
+                    <div id="resourceContent">
+                        <p>📂 All experiment resources will be available here including:</p>
+                        <ul>
+                            <li>📷 High-quality photos of experiment setup and results</li>
+                            <li>🎥 Step-by-step instructional videos</li>
+                            <li>📄 Comprehensive PDF guides and worksheets</li>
+                            <li>📊 Data analysis templates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to action for sign up -->
+        <div class="experiment-cta">
+            <h3>Want Access to All Experiments?</h3>
+            <p>Sign up to unlock detailed procedures, videos, and comprehensive learning materials for all our engineering experiments.</p>
+            <button onclick="openSignUpModal()" class="cta-button">Sign Up for Full Access</button>
+        </div>
+    </section>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
